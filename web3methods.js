@@ -385,8 +385,8 @@ const contractAddress = "0x329dF8D03B24fa89bD29609442751a0F5E3DFAda";
 
 const theContract = new web3.eth.Contract(contractABI, contractAddress);
 
-const price = 00000000000000000;
-const presaleprice = 00000000000000000;
+const price = 65000000000000000;
+const presaleprice = 55000000000000000;
 
 const loadCurrentSupply = async () => {
   const supply = await theContract.methods.totalSupply().call();
@@ -474,7 +474,6 @@ const getCurrentWalletConnected = async () => {
 };
 
 const mint = async (amount) => {
-  console.log(amount,'inside');
   //  window.contract = new web3.eth.Contract(contractABI, contractAddress);
   const transactionParameters = {
     from: window.ethereum.selectedAddress,
