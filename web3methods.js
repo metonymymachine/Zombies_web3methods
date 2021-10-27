@@ -1,11 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-
-
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3("wss://eth-mainnet.alchemyapi.io/v2/_k2rn6sEaO0HBMO6huvwfSK-Q52KKYrK");
 
-const contractABI = require("./MadScientists.json");
+const contractABI = require("./Zombies.json");
 const contractAddress = "0xCd4CBe63cAe7770Dd9a0029ca60DCaF9DFDece01";
 
 export const theContract = new web3.eth.Contract(
