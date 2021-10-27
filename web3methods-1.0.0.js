@@ -489,7 +489,7 @@ const mint = async (amount) => {
     });
     $(".alert").show();
     $(".alert").text(
-      "✅ Check out your transaction on Etherscan: https://rinkeby.etherscan.io/tx/" +
+      "✅ Check out your transaction on Etherscan: https://etherscan.io/tx/" +
         txHash
     );
   } catch (error) {
@@ -513,7 +513,7 @@ const metonymyHodlerMint = async (PreSaleAmount) => {
     });
     $(".alert").show();
     $(".alert").text(
-      "✅ Check out your transaction on Etherscan: https://rinkeby.etherscan.io/tx/" +
+      "✅ Check out your transaction on Etherscan: https://etherscan.io/tx/" +
         txHash
     );
   } catch (error) {
