@@ -393,11 +393,11 @@ const loadCurrentSupply = async () => {
 //Get the supply and attach
 loadCurrentSupply()
   .then((val) => {
-    $(".H3").text(`${5555 - val}/5.555`);
+    $(".supply").text(`${5555 - val}/5.555`);
   })
   .catch((err) => {
     console.log(err);
-    $(".H3").text("Sorry error occured!");
+    $(".supply").text("Sorry error occured!");
   });
 
 const loadPreSaleStatus = async () => {
