@@ -150,7 +150,7 @@ const metonymyHodlerMint = async (PreSaleAmount) => {
       params: [transactionParameters],
     });
     $(".alert").show();
-    $(".alert").text(
+    $(".alert").html(
       "✅ Check out your transaction on Etherscan: https://etherscan.io/tx/" +
         txHash
     );
@@ -290,3 +290,23 @@ const withdrawAll = async () => {
     };
   }
 };
+
+//Account state listener
+function addWalletListener() {
+  if (window.ethereum) {
+    window.ethereum.on("accountsChanged", (addressArray) => {
+      if (addressArray.length > 0) {
+        //get the user address and display it to metamask-btn class
+      let useraddress = `${addressArray[0].substring(0,2)}..${addressArray[0].slice(length - 2)}`
+      $(".alert").hide();
+      //add alert to btn
+      $('.metamask-button').text(`CONNECTED (${useraddress})`);
+      console.log(useraddress);
+      } else {
+        $(".alert").text("Please install metamask!");
+      }
+    });
+  } else {
+   $('.alert').text('You must install Metamask, a virtual Ethereum wallet, in your browser.')
+  }
+}
