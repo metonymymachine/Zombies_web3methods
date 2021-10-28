@@ -445,7 +445,8 @@ const connectWallet = async () => {
       let useraddress = `${addressArray[0].slice(length - 4)}`
       $(".alert").hide();
       //add alert to btn
-      $('.metamask-btn').text(`CONNECTED (${useraddress})`)
+      $('.metamask-button').text(`CONNECTED (${useraddress})`);
+      console.log(useraddress);
       return obj;
     } catch (err) {
       $(".alert").text("Please install metamask!");
