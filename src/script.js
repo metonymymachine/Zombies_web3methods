@@ -62,7 +62,7 @@ const contractAddress = "0xcf280c7b5E5C495938ecfDF3306783A8a8565850";
 
 const theContract = new web3.eth.Contract(contractABI, contractAddress);
 
-const price = "10000000000000000";
+const price = "20000000000000000";
 const presaleprice = "10000000000000000";
 
 const loadCurrentSupply = async () => {
